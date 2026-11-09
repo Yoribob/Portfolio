@@ -1,10 +1,10 @@
 import {Header} from "../layout/Header"
-
+import {Introduction} from "../layout/Introduction"
 export function AppLayout(){
     return (
         <>
         <Header/>
-        <h1>hi</h1>
+        <Introduction/>
         </>
     )
 }

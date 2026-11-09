@@ -1,10 +1,14 @@
 @import "tailwindcss";
+:root {
+  box-sizing: border-box;
+}
 
 body {
   background-color: rgb(242, 246, 252);
   opacity: 0.8;
-  background-image:
+  background-image: 
     linear-gradient(rgb(205, 220, 240) 1px, transparent 1px),
     linear-gradient(to right, rgb(205, 220, 240) 1px, rgb(242, 246, 252) 1px);
   background-size: 20px 20px;
+  font-family: "Kalam", cursive;
 }
