@@ -1,10 +1,21 @@
 import { ProjectCard } from "./ProjectCard";
+import { RoughNotation } from "react-rough-notation";
 
 export function Projects() {
   return (
-    <div className="w-full mt-5">
-      <span className="text-4xl font-semibold">My projects</span>
-      <ul className="mt-5 flex flex-col flex-wrap gap-6 items-center">
+    <section className="mt-14 w-full lg:mt-5" id="projects">
+      <RoughNotation
+        type="underline"
+        show
+        animationDelay={1600}
+        animationDuration={800}
+        color="#e05a5a"
+        padding={8}
+      >
+        <span className="text-5xl font-semibold lg:text-4xl">My projects</span>
+      </RoughNotation>
+
+      <ul className="mt-5 flex flex-col flex-wrap items-center gap-6">
         <li className="w-[calc(90%-0.75rem)]">
           <ProjectCard
             name={"Online 3D Chess"}
@@ -36,6 +47,6 @@ export function Projects() {
           />
         </li>
       </ul>
-    </div>
+    </section>
   );
 }

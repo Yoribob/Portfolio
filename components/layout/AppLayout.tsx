@@ -1,6 +1,10 @@
 import { Header } from "../layout/Header";
 import { Introduction } from "../layout/Introduction";
+import { AboutMe } from "./AboutMe";
+import { Contact } from "./Contact";
 import { Projects } from "./Projects";
+import { Footer } from "./Footer";
+import { TechStack } from "./TechStack";
 export function AppLayout() {
   return (
     <div className="px-5 py-2 lg:px-10 lg:py-5">
@@ -17,9 +21,13 @@ export function AppLayout() {
         </filter>
       </svg>
 
-      <Header />
+      <Header/>
       <Introduction />
-      <Projects />
+      <TechStack/>
+      <Projects/>
+      <AboutMe/>
+      <Contact/>
+      <Footer/>
     </div>
   );
 }
