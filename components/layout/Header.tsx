@@ -1,10 +1,37 @@
-export function Header(){
-    return (
-        <header className="w-full h-12 lg:h-16 flex flex-row gap-5 p-5 lg:p-10 lg:gap-10 items-center">
-            <span className="mr-auto font-semibold text-xl lg:text-4xl">Stepan</span>
-            <button className="font-medium italic text-sm lg:text-2xl">About</button>
-            <button className="font-medium italic text-sm lg:text-2xl">Projects</button>
-            <button className="font-medium italic text-sm lg:text-2xl">Contact</button>
-        </header>
-    )
+import { useState } from "react";
+import { RoughNotation } from "react-rough-notation";
+
+function NavButton({ children }: { children: string }) {
+  const [hovered, setHovered] = useState(false);
+
+  return (
+    <RoughNotation
+      type="circle"
+      show={hovered}
+      padding={10}
+      animationDuration={300}
+      color="#eec555"
+    >
+      <button
+        className="text-sm font-medium italic lg:text-2xl"
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
+        onFocus={() => setHovered(true)}
+        onBlur={() => setHovered(false)}
+      >
+        {children}
+      </button>
+    </RoughNotation>
+  );
+}
+
+export function Header() {
+  return (
+    <header className="flex h-12 w-full flex-row items-center gap-5 lg:h-16 lg:gap-10">
+      <span className="mr-auto text-xl font-semibold lg:text-4xl">Stepan</span>
+      <NavButton>About</NavButton>
+      <NavButton>Projects</NavButton>
+      <NavButton>Contact</NavButton>
+    </header>
+  );
 }
